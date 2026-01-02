@@ -27,7 +27,7 @@ alias .r='vim ~/.zshrc'
 alias vsway='vim ~/.config/sway/config'
 alias vswaylock='vim ~/.config/swaylock/config'
 alias vfoot='vim ~/.config/foot/foot.ini'
-alias vi3status='vim ~/.config/i3status/config'
+alias vstatus='vim ~/.config/i3status-rust/config.toml'
 
 # ls
 alias l='ls --color -CF'
