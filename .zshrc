@@ -50,3 +50,5 @@ export PICO_SDK_PATH=$HOME/pico/pico-sdk
 
 # SSH Agent
 eval "$(ssh-agent -s)" &> /dev/null
+
+[ -s "/home/h/.scm_breeze/scm_breeze.sh" ] && source "/home/h/.scm_breeze/scm_breeze.sh"
