@@ -1,9 +1,20 @@
-#! /bin/bash
+#!/bin/bash
 
-DIRS=(foot git i3status sway swaylock)
+FILES=(
+    ".config/git"
+    ".config/foot"
+    ".config/i3status"
+    ".config/sway/config"
+    ".config/swaylock/config"
+    ".zshrc"
+)
 
-for DIR in "${DIRS[@]}"; do
-  cp -r ~/.config/$DIR .config/
+for file in "${FILES[@]}"; do
+    src="$HOME/$file"
+
+    if [ ! -e "$file" ] || [ "$src" -nt "$file" ]; then
+        mkdir -p "$(dirname "$file")"
+        cp "$src" "$file"
+        echo "$file saved"
+    fi
 done
-
-cp -r ~/.zshrc .
