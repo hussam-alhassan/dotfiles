@@ -15,6 +15,9 @@ compinit
 
 PS1='%F{#2E9EF4}%n@%m:%~%$%f '
 
+# Set up arrow keys
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # --- ALIASES ---
 
@@ -43,12 +46,15 @@ alias egrep='egrep --color=auto'
 
 # Modern replacements
 alias cat="bat -pp" # --plain --paging=never
+alias cd="z"
 
 # Exports
 export PATH="$HOME/.local/bin:$PATH"
 export PICO_SDK_PATH=$HOME/pico/pico-sdk
 
-# SSH Agent
+# Source scripts
 eval "$(ssh-agent -s)" &> /dev/null
 
 [ -s "/home/h/.scm_breeze/scm_breeze.sh" ] && source "/home/h/.scm_breeze/scm_breeze.sh"
+
+eval "$(zoxide init zsh)"
