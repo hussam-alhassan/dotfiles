@@ -1,0 +1,70 @@
+[theme]
+theme = "native"
+
+[icons]
+icons = "none"
+
+[[block]]
+block = "focused_window"
+[block.format]
+full = " $title.str(max_w:15) |"
+short = " $title.str(max_w:10) |"
+
+[[block]]
+block = "net"
+device = "wlan0"
+format = " W: $ssid $signal_strength $graph_down $ip "
+missing_format = " W: down "
+
+#[[block]]
+#block = "net"
+#device = "eth0"
+#format = " E: $ip "
+#missing_format = " E: down "
+
+[[block]]
+block = "disk_space"
+path = "/"
+#format = " $icon $available "
+format = " FREE $available "
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "memory"
+format = " MEM $mem_used_percents "
+warning_mem = 80
+critical_mem = 95
+
+[[block]]
+block = "cpu"
+format = " CPU $utilization $barchart $boost "
+
+[[block]]
+block = "load"
+format = " AVG $1m% "
+
+[[block]]
+block = "battery"
+format = " BAT $percentage "
+
+[[block]]
+block = "time"
+format = " $timestamp.datetime(f:'%Y-%m-%d %a %H:%M:%S %p') "
+interval = 1
+
+[[block]]
+block = "menu"
+#text = "\uf011"
+text = "SYS"
+[[block.items]]
+display = " -&gt;   Sleep   &lt;-"
+cmd = "systemctl suspend"
+[[block.items]]
+display = " -&gt; Power Off &lt;-"
+cmd = "poweroff"
+confirm_msg = "Are you sure you want to power off?"
+[[block.items]]
+display = " -&gt;  Reboot   &lt;-"
+cmd = "reboot"
+confirm_msg = "Are you sure you want to reboot?"

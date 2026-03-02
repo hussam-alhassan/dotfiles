@@ -1,0 +1,71 @@
+[user]
+	email = hsm.link@proton.me
+	name = Hussam Alhassan
+
+# Aliases
+
+[alias]
+        i = init
+        last = log -1 HEAD
+        fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+
+# My Customisation
+
+[interactive]
+        diffFilter = delta --color-only
+[delta]
+        navigate = true
+[merge]
+        tool = vimdiff
+[mergetool "vimdiff"]
+        path = vim
+
+# Other Customisation // See https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
+[column]
+        ui = auto
+
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+
+# ---
+
+[help]
+        autocorrect = prompt
+[commit]
+        verbose = true
+[rerere]
+        enabled = true
+        autoupdate = true
+[rebase]
+        autoSquash = true
+        autoStash = true
+        updateRefs = true
+
+# ---
+
+[core]
+#       fsmonitor = true
+        untrackedCache = true
+
+# [merge]
+#       conflictstyle = zdiff3
+# [pull]
+#       rebase = true

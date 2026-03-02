@@ -1,0 +1,12 @@
+[Unit]
+Description=AutoSSH tunnel to %i
+After=network-online.target
+
+[Service]
+Environment="AUTOSSH_GATETIME=0"
+ExecStart=/usr/bin/autossh -M 0 -N -o "ServerAliveInterval=30" -o "ServerAliveCountMax=3" -F /home/h/.ssh/config bastion
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
