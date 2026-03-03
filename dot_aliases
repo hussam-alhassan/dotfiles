@@ -1,0 +1,27 @@
+alias copy=wl-copy
+
+alias .s='source $RC'
+alias .r='$EDITOR $RC'
+# alias .a='$EDITOR ~/ ALIASES_FILE'
+
+alias vsway='$EDITOR ~/.config/sway/config'
+alias vswaylock='$EDITOR ~/.config/swaylock/config'
+alias vfoot='$EDITOR ~/.config/foot/foot.ini'
+alias vstatus='$EDITOR ~/.config/i3status-rust/config.toml'
+
+# ls
+alias l='ls --color -CF'
+alias l.='ls --color -d .* --color=auto'
+alias ls='ls --color'
+alias ll='ls --color -l'
+alias la='ls --color -A'
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Modern replacements
+alias bat="batcat"
+alias cat="bat -pp" # --plain --paging=never
+alias vim="nvim"

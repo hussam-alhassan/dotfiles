@@ -1,4 +1,4 @@
-# Lines configured by zsh-newuser-install
+g Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -19,45 +19,24 @@ PS1='%F{#2E9EF4}%n@%m:%~%$%f '
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-# --- ALIASES ---
+# Common config files
+export RC=~/.zshrc
+. ~/.exports
+. ~/.aliases
 
-alias copy=wl-copy
+## Source scripts
 
-alias .s='source ~/.zshrc'
-alias .r='vim ~/.zshrc'
-# alias .a='vim ~/ ALIASES_FILE'
-
-alias vsway='vim ~/.config/sway/config'
-alias vswaylock='vim ~/.config/swaylock/config'
-alias vfoot='vim ~/.config/foot/foot.ini'
-alias vstatus='vim ~/.config/i3status-rust/config.toml'
-
-# ls
-alias l='ls --color -CF'
-alias l.='ls --color -d .* --color=auto'
-alias ls='ls --color'
-alias ll='ls --color -la'
-alias la='ls --color -A'
-
-# grep
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-# Modern replacements
-alias cat="bat -pp" # --plain --paging=never
-#alias cd="z"
-
-# Exports
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PICO_SDK_PATH=$HOME/pico/pico-sdk
-export EDITOR="nvim"
-export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
-
-# Source scripts
+# ssh
 eval "$(ssh-agent -s)" &> /dev/null
 
+# scm_breeze
 [ -s "/home/h/.scm_breeze/scm_breeze.sh" ] && source "/home/h/.scm_breeze/scm_breeze.sh"
 
+# zoxide
 eval "$(zoxide init zsh)"
+
+# fzf
+if [[ ! "$PATH" == */home/wpk97179/src/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/wpk97179/src/fzf/bin"
+fi
+source <(fzf --zsh)
