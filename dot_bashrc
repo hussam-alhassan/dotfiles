@@ -123,3 +123,7 @@ if [[ ! "$PATH" == */home/wpk97179/src/fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/home/wpk97179/src/fzf/bin"
 fi
 source <(fzf --bash)
+
+# oh-my-posh
+#eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/catpuccin_macchiato.omp.json)"
+#eval "$(oh-my-posh init bash --config $HOME/.config/oh-my-posh/darkblood.modded.omp.json)"

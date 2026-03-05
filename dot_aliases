@@ -2,7 +2,8 @@ alias copy=wl-copy
 
 alias .s='source $RC'
 alias .r='$EDITOR $RC'
-# alias .a='$EDITOR ~/ ALIASES_FILE'
+alias .e='$EDITOR ~/.exports'
+alias .a='$EDITOR ~/.aliases'
 
 alias vsway='$EDITOR ~/.config/sway/config'
 alias vswaylock='$EDITOR ~/.config/swaylock/config'
