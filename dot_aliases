@@ -4,6 +4,7 @@ alias .s='source $RC'
 alias .r='$EDITOR $RC'
 alias .e='$EDITOR ~/.exports'
 alias .a='$EDITOR ~/.aliases'
+alias .n='$EDITOR ~/.config/nvim/init.lua'
 
 alias vsway='$EDITOR ~/.config/sway/config'
 alias vswaylock='$EDITOR ~/.config/swaylock/config'
@@ -11,7 +12,7 @@ alias vfoot='$EDITOR ~/.config/foot/foot.ini'
 alias vstatus='$EDITOR ~/.config/i3status-rust/config.toml'
 
 # ls
-alias l='ls --color -CF'
+alias l='ls --color -CF1'
 alias l.='ls --color -d .* --color=auto'
 alias ls='ls --color'
 alias ll='ls --color -l'
