@@ -1,5 +1,5 @@
-g Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+# Lines configured by zsh-newuser-install
+HISTFILE=$HOME/.local/state/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt extendedglob
@@ -10,7 +10,7 @@ bindkey -e
 zstyle :compinstall filename '/home/h/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -d ~/.cache/zsh/zcompdump
 # End of lines added by compinstall
 
 PS1='%F{#2E9EF4}%n@%m:%~%$%f '
