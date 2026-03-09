@@ -2,9 +2,10 @@ alias copy=wl-copy
 
 alias .s='source $RC'
 alias .r='$EDITOR $RC'
-alias .e='$EDITOR ~/.exports'
-alias .a='$EDITOR ~/.aliases'
-alias .n='$EDITOR ~/.config/nvim/init.lua'
+alias .e='$EDITOR ~/.config/sh/exports'
+alias .a='$EDITOR ~/.config/sh/aliases'
+alias .v='$EDITOR ~/.config/nvim/init.lua'
+alias .g='$EDITOR ~/.config/git/config'
 
 alias vsway='$EDITOR ~/.config/sway/config'
 alias vswaylock='$EDITOR ~/.config/swaylock/config'
@@ -17,6 +18,7 @@ alias l.='ls --color -d .* --color=auto'
 alias ls='ls --color'
 alias ll='ls --color -l'
 alias la='ls --color -A'
+alias ll.='ls --color -l -d .* --color=auto'
 
 # grep
 alias grep='grep --color=auto'

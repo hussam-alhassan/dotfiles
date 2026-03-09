@@ -21,8 +21,8 @@ bindkey "^[[1;5D" backward-word
 
 # Common config files
 export RC=~/.zshrc
-. ~/.exports
-. ~/.aliases
+. $HOME/.config/sh/exports
+. $HOME/.config/sh/aliases
 
 ## Source scripts
 
@@ -30,7 +30,7 @@ export RC=~/.zshrc
 eval "$(ssh-agent -s)" &> /dev/null
 
 # scm_breeze
-[ -s "/home/h/.scm_breeze/scm_breeze.sh" ] && source "/home/h/.scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 # zoxide
 eval "$(zoxide init zsh)"
