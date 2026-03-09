@@ -1,5 +1,6 @@
 alias copy=wl-copy
 
+# dots
 alias .s='source $RC'
 alias .r='$EDITOR $RC'
 alias .e='$EDITOR ~/.config/sh/exports'
@@ -7,10 +8,10 @@ alias .a='$EDITOR ~/.config/sh/aliases'
 alias .v='$EDITOR ~/.config/nvim/init.lua'
 alias .g='$EDITOR ~/.config/git/config'
 
-alias vsway='$EDITOR ~/.config/sway/config'
-alias vswaylock='$EDITOR ~/.config/swaylock/config'
-alias vfoot='$EDITOR ~/.config/foot/foot.ini'
-alias vstatus='$EDITOR ~/.config/i3status-rust/config.toml'
+alias .sway='$EDITOR ~/.config/sway/config'
+alias .swaylock='$EDITOR ~/.config/swaylock/config'
+alias .foot='$EDITOR ~/.config/foot/foot.ini'
+alias .status='$EDITOR ~/.config/i3status-rust/config.toml'
 
 # ls
 alias l='ls --color -CF1'

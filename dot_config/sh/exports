@@ -1,8 +1,13 @@
-export PATH="$PATH:$HOME/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="$PATH:$HOME/repos/llvm-project/build/bin"
-
 export EDITOR="nvim"
 
 export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
+
+# Rust
+export CARGO_HOME="$HOME/.local/share/cargo"
+export RUSTUP_HOME="$HOME/.local/share/rustup"
+
+# PATH
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/repos/llvm-project/build/bin"
+export PATH="$PATH:$CARGO_HOME/bin"
