@@ -2,6 +2,10 @@
 	email = hsm.link@proton.me
 	name = Hussam Alhassan
 
+[core]
+        excludesFile = ~/.config/git/ignore
+
+
 # Aliases
 
 [alias]
