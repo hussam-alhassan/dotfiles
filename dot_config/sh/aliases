@@ -14,10 +14,11 @@ alias .foot='$EDITOR ~/.config/foot/foot.ini'
 alias .status='$EDITOR ~/.config/i3status-rust/config.toml'
 
 # ls
+alias ls='ls --group-directories-first'
 alias l='ls --color -CF1'
 alias l.='ls --color -d .* --color=auto'
 alias ls='ls --color'
-alias ll='ls --color -l'
+alias ll='ls --color -l --group-directories-first'
 alias la='ls --color -A'
 alias ll.='ls --color -l -d .* --color=auto'
 
@@ -27,6 +28,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # Modern replacements
-alias bat="batcat"
+# alias bat="batcat"
 alias cat="bat -pp" # --plain --paging=never
 alias vim="nvim"
+
+# Other
+alias publicip='curl ipinfo.io | jq'

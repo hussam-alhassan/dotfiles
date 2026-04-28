@@ -6,8 +6,13 @@ export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
 export CARGO_HOME="$HOME/.local/share/cargo"
 export RUSTUP_HOME="$HOME/.local/share/rustup"
 
+# Restic
+set -a; source /etc/restic/restic.env; set +a
+
 # PATH
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/repos/llvm-project/build/bin"
+export PATH="$PATH:$HOME/llvm-testing/scripts"
 export PATH="$PATH:$CARGO_HOME/bin"
+
